@@ -34,8 +34,3 @@ class Playbulb:
     def get_manufacturer(self):
         string_hexa = self.connection.char_read(self.hexa_manufacturer)
         return bytes.fromhex(string_hexa).decode('utf-8')
-
-if __name__ == '__main__':
-    c = Playbulb('94:FC:4B:0A:AC:E6')
-    print(c.get_name())
-    print(c.get_application_version())
